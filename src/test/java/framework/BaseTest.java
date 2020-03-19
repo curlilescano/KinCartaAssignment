@@ -1,5 +1,6 @@
 package framework;
 
+import config.Configuration;
 import config.PropertiesFile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +45,10 @@ public class BaseTest {
 
     public WebDriver getDriver() {
         return driver;
+    }
+
+    public void goToHomePage() {
+        driver.get(Configuration.getURL());
     }
 
 }
