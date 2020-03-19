@@ -10,16 +10,18 @@ public class SearchResultsPage extends BasePage {
         super(driver);
     }
 
-    By secondPage = By.xpath("//li[@class='a-normal']//a[contains(text(),'2')]");
-    By thirdItem = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/span[4]/div[1]/div[3]/div[1]/span[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]");
+//    By secondPage = By.xpath("//li[@class='a-normal']//a[contains(text(),'2')]");
+//    By thirdItem = By.xpath("//div[contains(@class,'s-result-list')]/div[3]//h2/a[contains(@class,'a-link-normal')]");
 
-    public void goTo2Page () {
-        waitVisibility(secondPage);
-        driver.findElement(secondPage).click();
+    public void goToPage (String value) {
+        By page = By.xpath("//li[@class='a-normal']//a[contains(text(),'" + value + "')]");
+        waitVisibility(page);
+        driver.findElement(page).click();
     }
 
-    public void clickOnThirdItem () {
-        waitVisibility(thirdItem);
-        driver.findElement(thirdItem).click();
+    public void clickOnItem (String index) {
+        By itemIndex = By.xpath("//div[contains(@class,'s-result-list')]/div[" + index + "]//h2/a[contains(@class,'a-link-normal')]");
+        waitVisibility(itemIndex);
+        driver.findElement(itemIndex).click();
     }
 }

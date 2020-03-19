@@ -27,8 +27,8 @@ public class AlexaTest extends BaseTest {
         goToHomePage();
         homePage.searchForItem("Alexa");
         homePage.submitSearch();
-        searchResultsPage.goTo2Page();
-        searchResultsPage.clickOnThirdItem();
+        searchResultsPage.goToPage("2");
+        searchResultsPage.clickOnItem("3");
         Assert.assertTrue(productDetailPage.addItemToCartButtonIsDisplayed());
 
     }
