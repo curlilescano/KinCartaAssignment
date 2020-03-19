@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Search for Alexa and add item to cart">
+
+    <test name="Add item to cart">
+        <classes>
+            <class name="tests.AlexaTest" />
+        </classes>
+    </test>
+
+</suite>
