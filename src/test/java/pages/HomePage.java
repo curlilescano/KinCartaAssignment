@@ -12,8 +12,13 @@ public class HomePage extends BasePage {
     }
 
     By searchBox = By.id("twotabsearchtextbox");
+    By submitButton = By.className("nav-input");
 
     public void searchForItem (String searchItem) {
+        waitVisibility(searchBox);
         driver.findElement(searchBox).sendKeys(searchItem);
+    }
+    public void submitSearch () {
+        driver.findElement(submitButton).click();
     }
 }

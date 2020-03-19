@@ -17,5 +17,8 @@ public class AlexaTest extends BaseTest {
     @Test
     public void addingItemToCart () {
         goToHomePage();
+        homePage.searchForItem("Alexa");
+        homePage.submitSearch();
+
     }
 }
