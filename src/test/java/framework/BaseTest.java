@@ -23,11 +23,14 @@ public class BaseTest {
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+            driver.manage().window().maximize();
 
         } else if (browserName.equalsIgnoreCase("firefox")) {
 
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+
         } else if (browserName.equalsIgnoreCase("edge")) {
 
             WebDriverManager.edgedriver().setup();
